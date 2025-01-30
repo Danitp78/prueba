@@ -1,5 +1,4 @@
 #Prueba
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +6,11 @@
     <title>Encuesta Personal</title>
 </head>
 <body>
+
+    <!-- Video al inicio (Pausado) -->
+    <h3>Video de Introducción</h3>
+    <iframe id="videoInicio" width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0" frameborder="0" allowfullscreen></iframe>
+
     <h2>Responde las preguntas:</h2>
     <form id="formulario">
         <label>¿Cuál es tu nombre?</label><br>
@@ -42,16 +46,11 @@
     <h3>Datos Ingresados:</h3>
     <p id="resultado"></p>
 
-    <!-- Video desde un archivo local -->
-    <h3>Video 1 (Archivo Local)</h3>
-    <video width="400" controls>
-        <source src="video1.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
-
-    <!-- Video desde YouTube -->
-    <h3>Video 2 (Desde YouTube)</h3>
-    <iframe width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <!-- Video después de completar el formulario -->
+    <div id="videoFinal" style="display: none;">
+        <h3>Video Final</h3>
+        <iframe id="videoReproducir" width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <script>
         function mostrarDatos() {
@@ -76,7 +75,11 @@
             }
 
             document.getElementById("resultado").innerHTML = resultado;
+
+            // Mostrar el video final
+            document.getElementById("videoFinal").style.display = "block";
         }
     </script>
+
 </body>
 </html>
