@@ -1,7 +1,9 @@
-# prueba
+#Prueba
 
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta Personal</title>
 </head>
 <body>
@@ -39,6 +41,17 @@
 
     <h3>Datos Ingresados:</h3>
     <p id="resultado"></p>
+
+    <!-- Video desde un archivo local -->
+    <h3>Video 1 (Archivo Local)</h3>
+    <video width="400" controls>
+        <source src="video1.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Video desde YouTube -->
+    <h3>Video 2 (Desde YouTube)</h3>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
 
     <script>
         function mostrarDatos() {
