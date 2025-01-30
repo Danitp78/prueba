@@ -1,5 +1,5 @@
 # prueba
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Encuesta Personal</title>
